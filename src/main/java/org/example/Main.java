@@ -5,12 +5,14 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
         exerciseOneToFour();
         exercisesCont();
         exercisesCont2();
+        extraAssign();
 
 
 
@@ -134,10 +136,70 @@ public class Main {
         System.out.println("\n########################## 14 ############################\n");
 
 
+        String time2 = "2023-07-14T11:11";
+
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("eeee dd MMM HH:mm");
+
+        LocalDateTime date2 = LocalDateTime.parse(time2);
+
+        String formattedDate = formatter2.format(date2);
+
+        System.out.println("Formatted Date: " + formattedDate);
+
+
+        System.out.println("\n########################## 15 ############################\n");
+
+        LocalDate localD = LocalDate.parse("2023-07-14");
+
+        LocalTime localT = LocalTime.parse("18:30");
+
+        LocalDateTime datetime3 = LocalDateTime.of(localD,localT);
+
+        System.out.println("The format combination of Date and time is shown as: " +datetime3);
+
+
+        System.out.println("\n########################## 16 ############################\n");
+
+        LocalDateTime testing2 = LocalDateTime.now();
+
+        LocalDate date22 = testing2.toLocalDate();
+
+        LocalTime time22 = testing2.toLocalTime();
+
+        System.out.println("Date: \n" +date22);
+
+        System.out.println("\nTime: \n" +time22.truncatedTo(ChronoUnit.SECONDS));
+
+
+
+        System.out.println("\n########################## 17 ############################\n");
 
 
 
 
+
+
+
+    }
+
+
+    public static void extraAssign(){
+
+
+        LocalDate calender = LocalDate.of(2018,01,01);
+        DateTimeFormatter formatter1 = DateTimeFormatter.ISO_DATE;
+
+        System.out.println("Here is a rolling calender for the Year 2018 \n");
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 31; j++) {
+                LocalDate currentDate = calender.plusMonths(i).plusDays(j);
+
+                System.out.println("\nYear-Month-Day :");
+
+                System.out.println(currentDate.format(formatter1));
+            }
+        }
+        System.out.println("\n##########################################################\n");
     }
 
 
