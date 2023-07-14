@@ -170,21 +170,10 @@ public class Main {
 
         System.out.println("\nTime: \n" +time22.truncatedTo(ChronoUnit.SECONDS));
 
-
-
-        System.out.println("\n########################## 17 ############################\n");
-
-
-
-
-
-
-
     }
-
-
     public static void extraAssign(){
 
+        System.out.println("\n########################## XTRA ############################\n");
 
         LocalDate calender = LocalDate.of(2018,01,01);
         DateTimeFormatter formatter1 = DateTimeFormatter.ISO_DATE;
