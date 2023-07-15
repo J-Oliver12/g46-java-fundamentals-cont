@@ -14,9 +14,6 @@ public class Main {
         exercisesCont2();
         extraAssign();
 
-
-
-
     }
 
         public static void exerciseOneToFour(){
