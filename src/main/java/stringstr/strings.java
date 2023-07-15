@@ -78,7 +78,7 @@ public class strings {
         System.out.println(ex11);
 
 
-        System.out.println("\n########################## End ############################\n");
+        System.out.println("\n########################## End ###########################\n");
 
 
 
